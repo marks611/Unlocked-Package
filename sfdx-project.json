@@ -3,16 +3,37 @@
         {
             "path": "force-app",
             "default": true,
-            "package": "dreamhouse",
+            "package": "th-dreamhouse",
             "versionName": "Version 1.0",
-            "versionNumber": "1.0.0.NEXT"
+            "versionNumber": "1.0.1.NEXT"
+        },
+        {
+            "path": "testeMatheus",
+            "package": "teste",
+            "versionName": "ver 0.1",
+            "versionNumber": "0.1.0.NEXT",
+            "default": false,
+            "dependencies": [
+                {
+                    "package": "th-dreamhouse",
+                    "versionNumber": "1.0.1.LATEST"
+                }
+            ]
         }
     ],
     "namespace": "",
     "sfdcLoginUrl": "https://login.salesforce.com",
     "sourceApiVersion": "45.0",
     "packageAliases": {
-        "dreamhouse": "0Ho4W000000PAxdSAG",
-        "dreamhouse@1.0.0-1": "04t4W000001F2LRQA0"
+        "th-dreamhouse": "0Ho4W000000PAxdSAG",
+        "th-dreamhouse@1.0.0-1": "04t4W000001F2LRQA0",
+        "th-dreamhouse@1.0.0-2": "04t4W000001F3DHQA0",
+        "teste": "0Ho4W000000PAyWSAW",
+        "th-dreamhouse@1.0.0-3": "04t4W0000028aCnQAI",
+        "teste@1.0.0-1": "04t4W0000028aTOQAY",
+        "th-dreamhouse@1.0.0-4": "04t4W0000028c4ZQAQ",
+        "teste@1.0.0-2": "04t4W0000028cCuQAI",
+        "th-dreamhouse@1.0.1-1": "04t4W0000028cLFQAY",
+        "th-dreamhouse@1.0.1-2": "04t4W0000028cXiQAI"
     }
 }

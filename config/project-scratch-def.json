@@ -1,7 +1,8 @@
 {
     "orgName": "Dreamhouse",
     "edition": "Developer",
-    "hasSampleData": "false",
+	"hasSampleData": "false",
+	"language": "en_US",
     "settings": {
         "lightningExperienceSettings": {
             "enableS1DesktopEnabled": true

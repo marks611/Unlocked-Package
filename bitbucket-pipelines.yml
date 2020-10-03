@@ -1,0 +1,10 @@
+image: skillz611/sfdxci:latest
+pipelines:
+	default:
+		step:
+			script: 
+				- echo $SFDC_PROD_URL
+				- echo $SFDC_PROD_USER
+				- sfdx force:auth:jwt:grant --clientid $CONSUMER_KEY --username $SFDC_PROD_USER --jwtkeyfile $PRIVATE_KEY --setdefaultdevhubusername --setalias sfdx-ci --instanceurl $SFDC_PROD_URL
+				- sfdx force:source:convert -d mdapi
+				- sfdx force:mdapi:deploy -d mdapi -u $SFDC_PROD_USER 

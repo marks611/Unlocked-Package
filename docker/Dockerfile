@@ -1,5 +1,6 @@
 FROM node:alpine
-RUN apk add --update --no-cache git openssh ca-certificates openssl curl gnupg dbus
+RUN apk add --update --no-cache git openssh ca-certificates openssl curl gnupg dbus openrc su-exec
 RUN npm install sfdx-cli --global
 RUN sfdx --version
-USER node
+RUN dbus-uuidgen --ensure
+USER root

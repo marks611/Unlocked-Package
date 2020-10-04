@@ -6,6 +6,7 @@ pipelines:
         script: 
           - echo $SFDC_PROD_URL   
           - echo $SFDC_PROD_USER
+          - export SFDX_USE_GENERIC_UNIX_KEYCHAIN=true
           - gpg --batch --passphrase $GPG_PASS server.key.gpg
           - sfdx force:auth:jwt:grant --clientid $CONSUMER_KEY --username $SFDC_PROD_USER --jwtkeyfile server.key --setdefaultdevhubusername --setalias sfdx-ci --instanceurl $SFDC_PROD_URL
           - sfdx force:source:convert -d mdapi
